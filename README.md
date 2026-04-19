@@ -14,3 +14,8 @@
 
 排序 + 贪心
 [2026_4_18](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_18)：[力扣：3897：连续二进制片段得到的最大值](https://leetcode.cn/problems/maximum-value-of-concatenated-binary-segments/description/)
+
+双指针
+[2026_4_19](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_19)：[力扣：1855：下标对中的最大距离](https://leetcode.cn/problems/maximum-distance-between-a-pair-of-values/?envType=daily-question&envId=2026-04-19)
+数位dp
+[2026_4_19](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_19)：[力扣：100899：统计网格路劲中好证书的数目](https://leetcode.cn/problems/count-good-integers-on-a-grid-path/description/)
