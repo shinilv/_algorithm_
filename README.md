@@ -19,3 +19,5 @@
 [2026_4_19](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_19)：[力扣：1855：下标对中的最大距离](https://leetcode.cn/problems/maximum-distance-between-a-pair-of-values/?envType=daily-question&envId=2026-04-19)
 数位dp
 [2026_4_19](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_19)：[力扣：100899：统计网格路劲中好证书的数目](https://leetcode.cn/problems/count-good-integers-on-a-grid-path/description/)
+
+[2026_4_20](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_20)：[力扣：3892：产生至少K个峰值的最小操作次数](https://leetcode.cn/problems/minimum-operations-to-achieve-at-least-k-peaks/)
