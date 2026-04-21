@@ -20,4 +20,8 @@
 数位dp
 [2026_4_19](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_19)：[力扣：100899：统计网格路劲中好证书的数目](https://leetcode.cn/problems/count-good-integers-on-a-grid-path/description/)
 
+环形DP
 [2026_4_20](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_20)：[力扣：3892：产生至少K个峰值的最小操作次数](https://leetcode.cn/problems/minimum-operations-to-achieve-at-least-k-peaks/)
+
+并查集
+[2026_4_21](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_21)：[力扣：1722：执行交换操作之后的最小汉明距离](https://leetcode.cn/problems/minimize-hamming-distance-after-swap-operations/description/?envType=daily-question&envId=2026-04-21)
