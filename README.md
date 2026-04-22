@@ -25,3 +25,6 @@
 
 并查集
 [2026_4_21](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_21)：[力扣：1722：执行交换操作之后的最小汉明距离](https://leetcode.cn/problems/minimize-hamming-distance-after-swap-operations/description/?envType=daily-question&envId=2026-04-21)
+
+字符串
+[2026_4_22](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_22)：[力扣：2452：距离字典两次编辑以内的单词](https://leetcode.cn/problems/words-within-two-edits-of-dictionary/?envType=daily-question&envId=2026-04-22)
