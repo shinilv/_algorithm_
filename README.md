@@ -28,3 +28,6 @@
 
 字符串
 [2026_4_22](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_22)：[力扣：2452：距离字典两次编辑以内的单词](https://leetcode.cn/problems/words-within-two-edits-of-dictionary/?envType=daily-question&envId=2026-04-22)
+
+数组
+[2026_4_23](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_23)：[力扣：2615：等值距离和](https://leetcode.cn/problems/sum-of-distances/description/?envType=daily-question&envId=2026-04-23)
