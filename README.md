@@ -31,3 +31,6 @@
 
 数组
 [2026_4_23](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_23)：[力扣：2615：等值距离和](https://leetcode.cn/problems/sum-of-distances/description/?envType=daily-question&envId=2026-04-23)
+
+带权并查集
+[2026_4_24](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_24)：[力扣：3887：增量偶权环查询](https://leetcode.cn/problems/incremental-even-weighted-cycle-queries/)
