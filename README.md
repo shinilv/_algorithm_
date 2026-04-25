@@ -34,3 +34,6 @@
 
 带权并查集
 [2026_4_24](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_24)：[力扣：3887：增量偶权环查询](https://leetcode.cn/problems/incremental-even-weighted-cycle-queries/)
+
+预处理 + dp
+[2026_4_25](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_25)：[力扣：3883：统计满足数位和数组的非递减数组数目](https://leetcode.cn/problems/count-non-decreasing-arrays-with-given-digit-sums/)
