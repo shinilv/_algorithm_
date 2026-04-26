@@ -41,3 +41,6 @@
 
 预处理 + dp
 [2026_4_25](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_25)：[力扣：3883：统计满足数位和数组的非递减数组数目](https://leetcode.cn/problems/count-non-decreasing-arrays-with-given-digit-sums/)
+
+dfs + 技巧
+[2026_4_26](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_26)：[力扣：1559：二维网格图中探测环](https://leetcode.cn/problems/detect-cycles-in-2d-grid/description/?envType=daily-question&envId=2026-04-26)
