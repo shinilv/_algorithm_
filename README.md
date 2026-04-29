@@ -44,3 +44,9 @@
 
 dfs + 技巧
 [2026_4_26](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_26)：[力扣：1559：二维网格图中探测环](https://leetcode.cn/problems/detect-cycles-in-2d-grid/description/?envType=daily-question&envId=2026-04-26)
+
+dfs + 技巧
+[2026_4_27](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_27)：[力扣：1391：二检查网格中是否存在有效路径](https://leetcode.cn/problems/check-if-there-is-a-valid-path-in-a-grid/?envType=daily-question&envId=2026-04-29)
+
+中位数贪心
+[2026_4_28](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_28)：[力扣：2033：获取单值网格的最小操作数](https://leetcode.cn/problems/detect-cycles-in-2d-grid/description/?envType=daily-question&envId=2026-04-26)
