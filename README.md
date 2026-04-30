@@ -50,3 +50,6 @@ dfs + 技巧
 
 中位数贪心
 [2026_4_28](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_28)：[力扣：2033：获取单值网格的最小操作数](https://leetcode.cn/problems/detect-cycles-in-2d-grid/description/?envType=daily-question&envId=2026-04-26)
+
+单调栈 + 贡献
+[2026_4_30](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_30)：[力扣：2033：获取单值网格的最小操作数](https://leetcode.cn/problems/count-good-subarrays/)
