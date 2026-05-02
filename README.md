@@ -54,8 +54,8 @@ dfs + 技巧
 单调栈 + 贡献
 [2026_4_30](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_4_30)：[力扣：2033：获取单值网格的最小操作数](https://leetcode.cn/problems/count-good-subarrays/)
 
-单调栈 + 贡献
+贡献
 [2026_5_1](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_5_1)：[力扣：396：旋转函数](https://leetcode.cn/problems/rotate-function/?envType=daily-question&envId=2026-05-02)
 
-单调栈 + 贡献
+暴力枚举
 [2026_5_2](https://github.com/shinilv/_algorithm_/tree/master/2026_4/2026_5_2)：[力扣：788：旋转数字](https://leetcode.cn/problems/rotated-digits/description/?envType=daily-question&envId=2026-05-02)
