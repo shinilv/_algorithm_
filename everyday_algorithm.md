@@ -123,3 +123,6 @@ math, 角度计算
 
 三指针
 [2026_7_4](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc430_c](https://atcoder.jp/contests/abc430/tasks/abc430_c)
+
+前后缀分解
+[2026_7_6](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc257_c](https://atcoder.jp/contests/abc257/tasks/abc257_c)
