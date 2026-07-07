@@ -126,3 +126,7 @@ math, 角度计算
 
 前后缀分解
 [2026_7_6](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc257_c](https://atcoder.jp/contests/abc257/tasks/abc257_c)
+
+
+思维
+[2026_7_7](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc406_c](https://atcoder.jp/contests/abc406/tasks/abc406_c)
