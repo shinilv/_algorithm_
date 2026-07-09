@@ -114,8 +114,19 @@ math, 角度计算
 [2026_6_21](https://github.com/shinilv/_algorithm_/tree/master/2026_6)：[力扣3379：统计主要元素子数组数目 II](https://leetcode.cn/problems/maximum-ice-cream-bars/description/?envType=daily-question&envId=2026-06-21)
 
 数学
-[2026_6_22](https://atcoder.jp/contests/abc400/tasks/abc400_c)：[abc400_c: 2^a b^2](https://leetcode.cn/problems/maximum-ice-cream-bars/description/?envType=daily-question&envId=2026-06-22)
+[2026_6_22](https://github.com/shinilv/_algorithm_/tree/master/2026_6)：[abc400_c: 2^a b^2](https://atcoder.jp/contests/abc400/tasks/abc400_c)
 
 
 二分 + 数学
 [2026_6_27](https://leetcode.cn/problems/maximum-total-value/description/)：[力扣3971：最大总价值](https://leetcode.cn/problems/maximum-ice-cream-bars/description/?envType=daily-question&envId=2026-06-27)
+
+
+三指针
+[2026_7_4](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc430_c](https://atcoder.jp/contests/abc430/tasks/abc430_c)
+
+前后缀分解
+[2026_7_6](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc257_c](https://atcoder.jp/contests/abc257/tasks/abc257_c)
+
+
+思维
+[2026_7_7](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc406_c](https://atcoder.jp/contests/abc406/tasks/abc406_c)
