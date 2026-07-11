@@ -130,3 +130,9 @@ math, 角度计算
 
 思维
 [2026_7_7](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc406_c](https://atcoder.jp/contests/abc406/tasks/abc406_c)
+
+并查集
+[2026_7_9](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[力扣：3459：图中的最长交替子序列长度](https://leetcode.cn/problems/path-existence-queries-in-a-graph-i/?envType=daily-question&envId=2026-07-09)
+
+树状数组
+[2026_7_11](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc432_e](https://atcoder.jp/contests/adt_all_20260504_2/tasks/abc432_e)
