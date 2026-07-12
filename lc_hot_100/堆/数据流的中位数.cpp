@@ -11,6 +11,10 @@
 思路：
 参考这个很清楚的题解https://leetcode.cn/problems/find-median-from-data-stream/solutions/3015873/ru-he-zi-ran-yin-ru-da-xiao-dui-jian-ji-4v22k/?envId=top-100-liked&envType=study-plan-v2
 
+那addNum的数分成两组，l和r， 让l中最大的元素小于等于r中最小的元素
+如果 len(l) == len(r) 向r中推入元素，再让r中最小元素放到l中
+否则 向l中推入元素，再让l中最大元素放到r中
+观察这两个操作，可以使用优先队列来维护。
 */
 
 class MedianFinder {
