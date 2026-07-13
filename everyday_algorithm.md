@@ -136,3 +136,6 @@ math, 角度计算
 
 树状数组
 [2026_7_11](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc432_e](https://atcoder.jp/contests/adt_all_20260504_2/tasks/abc432_e)
+
+前缀和 + 哈希
+[2026_7_13](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc265_d](https://atcoder.jp/contests/abc265/tasks/abc265_d)
