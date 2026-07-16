@@ -139,3 +139,9 @@ math, 角度计算
 
 前缀和 + 哈希
 [2026_7_13](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc265_d](https://atcoder.jp/contests/abc265/tasks/abc265_d)
+
+双端队列
+[2026_7_14](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc217_e](https://atcoder.jp/contests/abc217/tasks/abc217_e)
+
+组合数学 + 模运算
+[2026_7_15](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[arc223_b](https://atcoder.jp/contests/arc223/tasks/arc223_b)
