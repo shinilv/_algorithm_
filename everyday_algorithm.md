@@ -145,3 +145,9 @@ math, 角度计算
 
 组合数学 + 模运算
 [2026_7_15](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[arc223_b](https://atcoder.jp/contests/arc223/tasks/arc223_b)
+
+线段树
+[2026_7_16](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc397_f](https://atcoder.jp/contests/abc397/tasks/abc397_f)
+
+状态机 + DP + 树状数组
+[2026_7_17](https://github.com/shinilv/_algorithm_/tree/master/2026_7)：[abc439_f](https://atcoder.jp/contests/abc439/tasks/abc439_f)
