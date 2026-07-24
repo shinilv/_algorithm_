@@ -7,14 +7,24 @@
 方法一（快慢指针）：将数组视为链表，nums[i] 表示从下标 i 指向的下个节点。
 由于存在重复数字，链表中必然有环，环的入口即为重复数字。
 用快慢指针找环入口：先让快慢指针相遇，再将一个指针放回起点，同步移动直到相遇。
-方法二（二分答案）：在 [1, n] 中二分 mid，统计小于等于 mid 的元素个数。
-若个数 > mid，说明重复数在 [1, mid]，否则在 [mid+1, n]。
+a
+
 */
 
 
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
-
+        int slow = nums[0], fast = nums[nums[0]];
+        while (slow != fast) {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        }
+        slow = 0;
+        while (slow != fast) {
+            slow = nums[slow];
+            fast = nums[fast];
+        }
+        return slow;
     }
 };
