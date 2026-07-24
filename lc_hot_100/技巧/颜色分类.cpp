@@ -8,12 +8,23 @@
 n == nums.length
 1 <= n <= 300
 nums[i] 为 0、1 或 2
+
+思路：
+荷兰国旗算法
 */
 
 
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-
+        int l = 0, cur = 0, r = nums.size() - 1;
+        while (cur <= r) {
+            if (nums[cur] == 0) {
+                swap(nums[cur], nums[l++]);
+            } else if (nums[cur] == 2) {
+                swap(nums[cur], nums[r--]);
+            }
+            cur++;
+        }
     }
 };
