@@ -21,10 +21,12 @@ public:
         while (cur <= r) {
             if (nums[cur] == 0) {
                 swap(nums[cur], nums[l++]);
+                cur++;
             } else if (nums[cur] == 2) {
                 swap(nums[cur], nums[r--]);
+            } else {
+                cur++;
             }
-            cur++;
         }
     }
 };
