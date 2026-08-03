@@ -1,0 +1,182 @@
+跨模块调用时，调用方只能包含被调用模块inc目录中的公共头文件
+原来的结构可能是
+// 模块 A
+// ├── inc
+// │   └── XxxQDlg.h
+// ├── src
+// │   ├── XxxQDlg.cpp
+// │   └── XxxQDlg.ui
+// └── 自动生成目录
+//     └── ui_XxxQDlg.h
+
+但是 ui_XxxQDlg.h 是 Qt 根据 .ui 文件自动生成的内部文件，
+通常位于构建目录，不属于对外公开的 inc 目录。
+
+模块B调用XxxQDlg.h时，编译器继续处理 #include "ui_XxxQDlg.h"
+导致编译失败
+
+更合理的设计是：对外只公开一个稳定的 API，具体的 QDlg 和 ui_XxxQDlg.h 留在模块内部。
+
+更新后的设计结构
+// 模块 A
+// ├── inc
+// │   └── XxxDialogAPI.h          对外公开
+// │
+// ├── src
+// │   ├── XxxDialogAPI.cpp
+// │   ├── XxxQDlg.h               模块内部使用
+// │   ├── XxxQDlg.cpp
+// │   └── XxxQDlg.ui
+// │
+// └── 自动生成目录
+//     └── ui_XxxQDlg.h
+
+快模块调用关系变成：
+/*
+    模块 B
+        ↓ 包含
+    XxxDialogAPI.h
+        ↓ 模块 A 内部实现
+    XxxDialogAPI.cpp
+        ↓ 创建并调用
+    XxxQDlg
+        ↓ 使用
+    ui_XxxQDlg.h
+*/
+
+
+// 项目示例：
+
+// #ifdef ZWPD_NEW_UI
+
+// #pragma once
+
+// #include "Z_PidDataOperator.h"
+
+// enum class PipeAreaType;
+// /*!
+//  * Draw模块对话框API
+//  */
+// namespace DrawQDlgAPI
+// {
+// 	/*!
+// 	 * 获取PID位号的数据
+// 	 */
+// 	struct GetPidBitNumberData
+// 	{
+// 		ZTString  m_selSitNumber;  //!< 选择的位号
+// 		ZID       m_selId;         //!< 选择的实体Id
+// 		ZID       m_gId;           //!< GID
+// 		bool      m_bOk;           //!< 是否确认
+// 	};
+
+// 	/*!
+// 	 * \param[in] entClass 实体类名
+// 	 * \param[in] prjId 项目Id
+// 	 * \param[in] sEntType 实体类型
+// 	 * \param[in] bShowType 是否显示分类列表
+// 	 * \param[in] equId 建模设备ID（管嘴对话框使用），默认空
+// 	 * \param[out] data 返回数据
+// 	 */
+// 	Z_Draw_Export bool GetPidBitNumberQDlg(const ZTString& entClass, const ZID& prjId,
+// 		const ZTString& sEntType, const bool& bShowType,
+// 		const ZID& equId, GetPidBitNumberData& data);
+
+// 	/*!
+// 	 * \param[in] entClass 实体类名
+// 	 * \param[in] prjId 项目Id
+// 	 * \param[in] sEntType 实体类型
+// 	 * \param[out] data 返回数据
+// 	 */
+// 	Z_Draw_Export bool GetPidBitNumberForElementQDlg(const ZTString& entClass, const ZID& prjId,
+// 		const ZTString& sEntType, GetPidBitNumberData& data);
+
+// 	struct PipeAreaData
+// 	{
+// 		ZID					gid;
+// 		PipeAreaType        pipeAreaType;
+// 		int					colorIndex;
+// 		QString				strPipeAreaName;
+// 	};
+
+// 	/*
+// 	* 获取主项编号数据
+// 	* \param	[in]	 gid			  GID
+// 	* \param	[in]	 strPipeAreaNo	 主项编号
+// 	* \param	[in]	 pipeAraeDaa	 返回主项编号数据
+// 	*/
+// 	Z_Draw_Export bool GetCreatePipeAreaQDlg(const ZID& gid, const ZTString& strPipeAreaNo, PipeAreaData& pipeAraeDaa);
+// }
+
+// #endif
+
+// #ifdef ZWPD_NEW_UI
+
+// #include "StdAfx.h"
+// #include "Z_Draw/Z_DrawQDlgAPI.h"
+// #include "Z_Draw/DrawPipeNet/ZWDrawPipeAreaJig.h"
+// #include "Z_mainGetPidBitCheckNumberQDlg.h"
+// #include "DrawPipeNet/ZWDrawPipeAreaQDlg.h"
+// #include <qwinwidget.h>
+
+// namespace DrawQDlgAPI
+// {
+// 	bool GetPidBitNumberQDlg(const ZTString& entClass, const ZID& prjId,
+// 		const ZTString& sEntType, const bool& bShowType,
+// 		const ZID& equId, GetPidBitNumberData& data)
+// 	{
+// 		HWND hwnd = nullptr;
+// 		auto pFrame = Zu_IMainWindow::Instance();
+// 		if (pFrame)
+// 			hwnd = pFrame->GetSafeHwnd();
+
+// 		QWinWidget win(hwnd);
+// 		Z_mainGetPidBitCheckNumberQDlg dlg(entClass, prjId, sEntType, bShowType, equId, &win);
+
+// 		if (QDialog::Accepted != dlg.exec())
+// 		{
+// 			data.m_bOk = false;
+// 			return false;
+// 		}
+
+// 		data.m_selSitNumber = dlg.getSelSitNumber();
+// 		data.m_selId = dlg.getSelId();
+// 		data.m_gId = dlg.getGId();
+// 		data.m_bOk = true;
+// 		return true;
+// 	}
+
+// 	bool GetPidBitNumberForElementQDlg(const ZTString& entClass, const ZID& prjId,
+// 		const ZTString& sEntType, GetPidBitNumberData& data)
+// 	{
+// 		// 元件插入默认不显示分类列表
+// 		return GetPidBitNumberQDlg(entClass, prjId, sEntType, false, ZID(), data);
+// 	}
+
+// 	Z_Draw_Export bool GetCreatePipeAreaQDlg(const ZID& gid, const ZTString& strPipeAreaNo, PipeAreaData& pipeAreaData)
+// 	{
+// 		HWND hwnd = nullptr;
+// 		auto pFrame = Zu_IMainWindow::Instance();
+// 		if (pFrame)
+// 			hwnd = pFrame->GetSafeHwnd();
+
+// 		QWinWidget win(hwnd);
+// 		ZWDrawPipeAreaQDlg dlg(&win, _TQT(strPipeAreaNo));
+// 		dlg.setGid(gid);
+// 		if (dlg.exec() != QDialog::Accepted)
+// 		{
+// 			return false;
+// 		}
+
+// 		pipeAreaData.gid = dlg.getGid();
+// 		pipeAreaData.colorIndex = dlg.getColorIndex();
+// 		pipeAreaData.pipeAreaType = dlg.getCreateType();
+// 		pipeAreaData.strPipeAreaName = dlg.getName();
+// 		return true;
+// 	}
+
+// }
+
+// #endif
+
+
